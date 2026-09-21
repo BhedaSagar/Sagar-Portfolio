@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sagar Bheda | Backend Developer | Node.js | Sails.js | GenAI</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Portfolio of Sagar Bheda, Backend Developer specializing in Node.js, Sails.js, REST APIs, databases, real-time systems, and practical GenAI/RAG applications.">
+  <meta name="keywords" content="Backend Developer, Node.js Developer, Sails.js Developer, Backend Engineer, JavaScript Developer, REST API Developer, PostgreSQL, MongoDB, Redis, RAG, LangChain, GenAI, Vector Database, pgvector, Ollama">
+  <meta name="author" content="Sagar Bheda">
+  <link rel="canonical" href="https://github.com/BhedaSagar">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sagar Bheda | Backend Developer | Node.js | Sails.js | GenAI">
+  <meta property="og:description" content="Backend Developer building scalable systems with Node.js, Sails.js, real-time architectures, and practical GenAI/RAG applications.">
+  <meta property="og:site_name" content="Sagar Bheda Portfolio">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sagar Bheda | Backend Developer | Node.js | Sails.js | GenAI">
+  <meta name="twitter:description" content="Portfolio of Sagar Bheda, Backend Developer specializing in Node.js, Sails.js, REST APIs, databases, real-time systems, and practical GenAI/RAG applications.">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Screen Reader Skip Link -->
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <!-- ========================================================================
+       Navigation Header
+       ======================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Sagar Bheda Homepage">
+        <div class="brand-badge">SB</div>
+        <div class="brand-text">
+          <span class="brand-name">Sagar Bheda</span>
+          <span class="brand-status">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            Junior Backend Dev • Zignuts
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="desktop-nav" role="navigation" aria-label="Main Navigation">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#rag-case-study" class="nav-link">RAG Case Study</a>
+        <a href="#architecture" class="nav-link">Architecture</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Header Action Buttons -->
+      <div class="header-actions">
+        <a href="https://github.com/BhedaSagar" target="_blank" rel="noopener noreferrer" class="btn btn-icon" aria-label="GitHub Profile">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+        </a>
+        <button class="btn btn-outline btn-sm trigger-resume-modal" id="navResumeBtn">
+          Resume
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-nav-drawer" id="mobileDrawer" role="dialog" aria-modal="true">
+      <a href="#about" class="nav-link mobile-nav-link">About</a>
+      <a href="#experience" class="nav-link mobile-nav-link">Experience</a>
+      <a href="#projects" class="nav-link mobile-nav-link">Projects</a>
+      <a href="#rag-case-study" class="nav-link mobile-nav-link">RAG Case Study</a>
+      <a href="#architecture" class="nav-link mobile-nav-link">Architecture</a>
+      <a href="#skills" class="nav-link mobile-nav-link">Skills</a>
+      <a href="#contact" class="nav-link mobile-nav-link">Contact</a>
+      <div class="mobile-drawer-actions">
+        <a href="https://github.com/BhedaSagar" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          Visit GitHub Profile
+        </a>
+        <button class="btn btn-primary trigger-resume-modal">
+          Download Resume PDF
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       Main Content
+       ======================================================================== -->
+  <main id="mainContent">
+
+    <!-- 1. Hero Section -->
+    <section id="hero" class="hero-section" aria-label="Introduction">
+      <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+      
+      <div class="container">
+        <div class="hero-content reveal-init">
+          <div class="hero-status-pill">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <span>Backend Developer</span>
+            <span class="company-tag">• Zignuts Technolab (Gandhinagar)</span>
+          </div>
+
+          <h1 class="hero-name">
+            Sagar Bheda
+          </h1>
+
+          <p class="hero-headline">
+            Backend Developer building scalable systems with <span class="text-gradient">Node.js, Sails.js & modern AI</span>
+          </p>
+
+          <p class="hero-description">
+            I build production-ready backend services, real-time systems, APIs, and practical AI/RAG applications. Experienced in optimizing high-traffic platforms serving <strong>650,000+ registered users</strong> and <strong>60+ microservices</strong> with horizontal scaling, Redis caching, and AWS SQS queuing.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#projects" class="btn btn-primary btn-lg">
+              View Projects
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="https://github.com/BhedaSagar" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+              GitHub (BhedaSagar)
+            </a>
+            <a href="#contact" class="btn btn-outline btn-lg">
+              Contact Me
+            </a>
+            <button class="btn btn-secondary btn-lg trigger-resume-modal">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Resume PDF
+            </button>
+          </div>
+
+          <div class="hero-highlights-strip">
+            <div class="highlight-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7h-7m7 5h-7m7 5h-7M4 7h.01M4 12h.01M4 17h.01"/></svg>
+              <span>650,000+ Users • 60+ Scaled Services</span>
+            </div>
+            <div class="highlight-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              <span>~200 ms Optimized Endpoints • Redis & SQS</span>
+            </div>
+            <div class="highlight-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+              <span>LangChain & pgvector RAG Pipelines</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Hero Technology Marquee -->
+    <section class="tech-marquee-container" aria-label="Technology Stack Strip">
+      <div class="tech-marquee-track">
+        <!-- Set 1 -->
+        <span class="tech-pill">⚡ Node.js</span>
+        <span class="tech-pill">⛵ Sails.js</span>
+        <span class="tech-pill">📜 JavaScript / TypeScript</span>
+        <span class="tech-pill">🔌 RESTful APIs</span>
+        <span class="tech-pill">🐘 PostgreSQL</span>
+        <span class="tech-pill">🍃 MongoDB Aggregation</span>
+        <span class="tech-pill">🟥 Redis Caching</span>
+        <span class="tech-pill">📦 AWS SQS</span>
+        <span class="tech-pill">🔄 Socket.io / WebSockets</span>
+        <span class="tech-pill">📡 Server-Sent Events (SSE)</span>
+        <span class="tech-pill">🔥 Firebase / FCM</span>
+        <span class="tech-pill">🍏 Apple APNs & Live Activities</span>
+        <span class="tech-pill">📱 Huawei Push Kit</span>
+        <span class="tech-pill">🗺️ Mapbox APIs</span>
+        <span class="tech-pill">🦜🔗 LangChain</span>
+        <span class="tech-pill">🦙 Ollama</span>
+        <span class="tech-pill">📐 pgvector</span>
+        <span class="tech-pill">🌿 Git & GitHub</span>
+        <span class="tech-pill">🚀 Postman</span>
+        <!-- Duplicated Set 2 for Infinite Continuous Loop -->
+        <span class="tech-pill">⚡ Node.js</span>
+        <span class="tech-pill">⛵ Sails.js</span>
+        <span class="tech-pill">📜 JavaScript / TypeScript</span>
+        <span class="tech-pill">🔌 RESTful APIs</span>
+        <span class="tech-pill">🐘 PostgreSQL</span>
+        <span class="tech-pill">🍃 MongoDB Aggregation</span>
+        <span class="tech-pill">🟥 Redis Caching</span>
+        <span class="tech-pill">📦 AWS SQS</span>
+        <span class="tech-pill">🔄 Socket.io / WebSockets</span>
+        <span class="tech-pill">📡 Server-Sent Events (SSE)</span>
+        <span class="tech-pill">🔥 Firebase / FCM</span>
+        <span class="tech-pill">🍏 Apple APNs & Live Activities</span>
+        <span class="tech-pill">📱 Huawei Push Kit</span>
+        <span class="tech-pill">🗺️ Mapbox APIs</span>
+        <span class="tech-pill">🦜🔗 LangChain</span>
+        <span class="tech-pill">🦙 Ollama</span>
+        <span class="tech-pill">📐 pgvector</span>
+        <span class="tech-pill">🌿 Git & GitHub</span>
+        <span class="tech-pill">🚀 Postman</span>
+      </div>
+    </section>
+
+    <!-- 3. About Me Section -->
+    <section id="about" class="section" aria-label="About Sagar Bheda">
+      <div class="container">
+        <div class="section-header reveal-init">
+          <span class="section-tag">Profile Overview</span>
+          <h2 class="section-title">Engineering Background & Production Scope</h2>
+          <p class="section-subtitle">
+            Translating complex business workflows into resilient, high-throughput backend services and practical AI integrations.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-narrative reveal-init">
+            <p>
+              I’m a <strong>Backend Developer currently working at Zignuts Technolab (Gandhinagar)</strong>, where I build and maintain backend services and RESTful APIs for production systems.
+            </p>
+            <p>
+              My primary expertise is in <strong>Node.js and Sails.js</strong>, with hands-on experience working with <strong>PostgreSQL, MongoDB (Aggregation), Redis (Caching), AWS SQS</strong>, real-time communication, authentication, notifications, and third-party integrations.
+            </p>
+            <p>
+              My work involves solving real business problems across <strong>queue management, appointments, e-service workflows, agent operations, notifications, and real-time systems</strong> for high-traffic environments such as hospitals and restaurants with <strong>650,000+ registered user accounts</strong>.
+            </p>
+            <p>
+              Alongside backend engineering, I enjoy building AI-powered applications. I recently built a <strong>RAG-based KnowledgeBase AI platform</strong> using <strong>LangChain, Ollama, PostgreSQL/pgvector, and MongoDB</strong> to explore document intelligence, semantic search, embeddings, and LLM-powered responses.
+            </p>
+          </div>
+
+          <div class="stats-grid reveal-init">
+            <div class="stat-card">
+              <span class="stat-number">650k+</span>
+              <span class="stat-title">Registered Users</span>
+              <span class="stat-desc">Production platform scale</span>
+            </div>
+
+            <div class="stat-card">
+              <span class="stat-number">~200ms</span>
+              <span class="stat-title">Response Time</span>
+              <span class="stat-desc">Postman-verified Redis cache</span>
+            </div>
+
+            <div class="stat-card">
+              <span class="stat-number">8.74</span>
+              <span class="stat-title">CGPA</span>
+              <span class="stat-desc">B.Tech IT • Ganpat University</span>
+            </div>
+
+            <div class="stat-card">
+              <span class="stat-number">60+</span>
+              <span class="stat-title">Services Scaled</span>
+              <span class="stat-desc">Behind load balancer & SQS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Professional Experience Section -->
+    <section id="experience" class="section" aria-label="Professional Experience">
+      <div class="container">
+        <div class="section-header reveal-init">
+          <span class="section-tag">Career Timeline</span>
+          <h2 class="section-title">Production Backend Experience</h2>
+          <p class="section-subtitle">
+            Responsible for designing, developing, maintaining, and optimizing backend services and RESTful APIs for live platforms.
+          </p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-card reveal-init">
+            <div class="timeline-header">
+              <div class="company-brand">
+                <div class="company-icon">ZT</div>
+                <div class="company-info">
+                  <h3>Junior Backend Developer | Zignuts Technolab</h3>
+                  <div class="company-meta">
+                    <span>Gandhinagar, Gujarat, India</span>
+                    <span>•</span>
+                    <span>March 2025 – Present</span>
+                  </div>
+                </div>
+              </div>
+              <div class="company-badge">
+                <span class="pulse-dot" aria-hidden="true"></span>
+                Active Production Role
+              </div>
+            </div>
+
+            <p class="timeline-summary">
+              Working on an online queue, appointment, and e-service ticketing platform for high-traffic environments such as hospitals and restaurants; <strong>650,000 registered user accounts</strong> and <strong>60+ services</strong> running behind a load balancer with horizontal scaling.
+            </p>
+
+            <div class="timeline-responsibilities">
+              <div class="resp-box">
+                <div class="resp-box-title">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                  Ticket Lifecycle APIs & SLA
+                </div>
+                <ul>
+                  <li>Built ticket lifecycle APIs (assign, transfer, serve, hold, complete) and SLA tracking.</li>
+                  <li>Implemented role-based workflows and permissions for agents (e-service, queue, appointment), supervisors, managers, merchants, and admins.</li>
+                  <li>Enforced strict input sanitization, centralized error handling, and structured RESTful contracts.</li>
+                </ul>
+              </div>
+
+              <div class="resp-box">
+                <div class="resp-box-title">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                  Query Optimization & ~200ms Latency
+                </div>
+                <ul>
+                  <li>Optimized high-traffic queue and ticket endpoints to <strong>~200 ms response time</strong>, measured in Postman.</li>
+                  <li>Added Redis caching layer and replaced slow Waterline ORM calls with high-performance native PostgreSQL queries.</li>
+                  <li>Leveraged MongoDB aggregation pipelines for efficient reporting and complex data processing.</li>
+                </ul>
+              </div>
+
+              <div class="resp-box">
+                <div class="resp-box-title">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                  Real-Time Feeds & Notifications
+                </div>
+                <ul>
+                  <li>Delivered live queue feeds, ticket counts, and agent updates in real time using Socket.io/WebSocket event handling.</li>
+                  <li>Built push and persistent notifications across Android, iOS, and Huawei devices integrating FCM, Apple APNs (including Live Activities), and Huawei Push Kit from the ground up.</li>
+                  <li>Reduced failed external calls by <strong>~90%</strong> by adding validation, timeouts, and fallback handling around Mapbox and SMS integrations.</li>
+                </ul>
+              </div>
+
+              <div class="resp-box">
+                <div class="resp-box-title">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                  Security, SQS & Defect Resolution
+                </div>
+                <ul>
+                  <li>Remediated penetration-test findings in annual security cycles, hardening JWT, Firebase auth, OTP verification, and RBAC.</li>
+                  <li>Offloaded heavy workflows by building async processing with AWS SQS, internal service-to-service APIs, and 10–15 scheduled background cron jobs.</li>
+                  <li>Resolved production defects efficiently within 1–2 hours (up to ~4h for complex issues) by tracing root causes across API, database, cache, and queue layers.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="tech-tags-group">
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Sails.js</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">MongoDB Aggregation</span>
+              <span class="tech-tag">Redis Caching</span>
+              <span class="tech-tag">AWS SQS</span>
+              <span class="tech-tag">Socket.io</span>
+              <span class="tech-tag">Apple APNs Live Activities</span>
+              <span class="tech-tag">Huawei Push Kit</span>
+              <span class="tech-tag">Firebase FCM</span>
+              <span class="tech-tag">Mapbox APIs</span>
+              <span class="tech-tag">Cron Jobs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Main Production Project — Online Queue Management Platform -->
+    <section id="projects" class="section" aria-label="Main Projects">
+      <div class="container">
+        <div class="section-header reveal-init">
+          <span class="section-tag">Featured Project</span>
+          <h2 class="section-title">Production Engineering Case Study</h2>
+          <p class="section-subtitle">
+            An enterprise-scale platform orchestrating customer queues, appointments, e-services, and real-time state management.
+          </p>
+        </div>
+
+        <div class="projects-container">
+          <article class="project-feature-card reveal-init">
+            <div class="project-topbar">
+              <div class="badge-group">
+                <span class="project-badge badge-prod">Production Project • Zignuts Technolab</span>
+                <span class="project-badge badge-role">Role: Backend Developer</span>
+                <span class="project-badge badge-role">650k Users • 60+ Services</span>
+              </div>
+
+              <!-- Perspective Switcher -->
+              <div class="view-mode-toggle" role="tablist" aria-label="Perspective Switcher">
+                <button class="mode-btn active" data-mode="recruiter" role="tab" aria-selected="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                  Recruiter View
+                </button>
+                <button class="mode-btn" data-mode="technical" role="tab" aria-selected="false">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                  Technical View
+                </button>
+              </div>
+            </div>
+
+            <div class="project-header">
+              <h3>Online Queue Management Platform</h3>
+              <p class="project-subtitle">High-Traffic Enterprise Queue Orchestration, Appointment Workflows & Real-Time Event Architecture</p>
+              <p class="project-lead">
+                An online queue management platform designed for high-traffic environments such as hospitals and restaurants to manage customer queues, appointments, service tickets, agents, and real-time operations across 650,000+ registered user accounts.
+              </p>
+            </div>
+
+            <!-- View 1: Recruiter View Panel -->
+            <div class="view-panel active" data-view="recruiter">
+              <div class="recruiter-overview-grid">
+                <div class="overview-card">
+                  <h4>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    End-to-End Queue Lifecycle
+                  </h4>
+                  <p>Streamlined ticket creation, agent assignment, multi-state customer progression (waiting, in-progress, hold, completed), SLA tracking, and counter management across distributed service centers.</p>
+                </div>
+
+                <div class="overview-card">
+                  <h4>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    Appointments & E-Services
+                  </h4>
+                  <p>Booking confirmation windows, OTP validation workflows, automated reminders, and complete ticket transfer lifecycles for agents, supervisors, managers, merchants, and administrators.</p>
+                </div>
+
+                <div class="overview-card">
+                  <h4>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    Sub-Second Real-Time Feeds
+                  </h4>
+                  <p>Real-time visual feeds showing live ticket counters and estimated wait times, backed by multi-channel notifications on Android, iOS (Live Activities), and Huawei devices.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- View 2: Technical View Panel -->
+            <div class="view-panel" data-view="technical">
+              <div class="tech-modules-grid">
+                <div class="tech-module-item">
+                  <div class="tech-module-title">
+                    <span>Lifecycle APIs & SLA Engine</span>
+                    <span class="mono">Node / Sails</span>
+                  </div>
+                  <ul>
+                    <li>Ticket assignment, transfer, serve, hold, complete states with strict SLA enforcement.</li>
+                    <li>Role-based workflows and granular permissions for 6 distinct stakeholder roles.</li>
+                    <li>Structured error response schemas and standardized API output envelopes.</li>
+                  </ul>
+                </div>
+
+                <div class="tech-module-item">
+                  <div class="tech-module-title">
+                    <span>Performance & ~200ms Latency</span>
+                    <span class="mono">Redis / Postgres</span>
+                  </div>
+                  <ul>
+                    <li>Optimized high-traffic queue endpoints down to ~200 ms response time.</li>
+                    <li>Replaced slow Waterline ORM calls with tuned native PostgreSQL queries.</li>
+                    <li>Redis caching for hot queue counts; MongoDB aggregation pipelines for metrics.</li>
+                  </ul>
+                </div>
+
+                <div class="tech-module-item">
+                  <div class="tech-module-title">
+                    <span>Real-Time Event Flows</span>
+                    <span class="mono">Socket.io</span>
+                  </div>
+                  <ul>
+                    <li>Event-driven architecture streaming live ticket progression to customer dashboards.</li>
+                    <li>Synchronized real-time queue counter updates and live agent serving feeds.</li>
+                    <li>Channel-based socket rooms ensuring tenant and branch data isolation.</li>
+                  </ul>
+                </div>
+
+                <div class="tech-module-item">
+                  <div class="tech-module-title">
+                    <span>Cross-Platform Push Dispatchers</span>
+                    <span class="mono">APNs / FCM / Huawei</span>
+                  </div>
+                  <ul>
+                    <li>Integrated Apple APNs including iOS Live Activities for real-time lock screen tracking.</li>
+                    <li>Firebase Cloud Messaging (FCM) and Huawei Push Kit built from the ground up.</li>
+                    <li>Reduced external API failures by ~90% via timeouts and fallback circuits on Mapbox/SMS.</li>
+                  </ul>
+                </div>
+
+                <div class="tech-module-item">
+                  <div class="tech-module-title">
+                    <span>Security & Pentest Hardening</span>
+                    <span class="mono">JWT / RBAC / OTP</span>
+                  </div>
+                  <ul>
+                    <li>Remediated penetration-testing findings in the annual year-end security audit.</li>
+                    <li>Hardened JWT, Firebase authentication, OTP verification, and password reset flows.</li>
+                    <li>Enforced role-based access control protecting administrative endpoints.</li>
+                  </ul>
+                </div>
+
+                <div class="tech-module-item">
+                  <div class="tech-module-title">
+                    <span>Async Processing & Queues</span>
+                    <span class="mono">AWS SQS / Crons</span>
+                  </div>
+                  <ul>
+                    <li>AWS SQS queues offloading heavy notification and ticket calculation workflows.</li>
+                    <li>10–15 scheduled background cron jobs executing batch syncs and maintenance.</li>
+                    <li>Fast defect resolution: 1–2 hours average root-cause tracing across DB, cache, and queues.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Expandable Engineering Case Study Drawer -->
+            <details class="case-study-details">
+              <summary class="details-summary">
+                <span>View Complete Architecture & Engineering Decisions</span>
+                <span class="mono">[+] Expand</span>
+              </summary>
+              <div class="details-content">
+                <h5>Problem & Context</h5>
+                <p>
+                  High-traffic public and enterprise service environments (e.g. major healthcare clinics, hospitals, and busy restaurants) experience severe bottlenecks when physical queues and mobile appointments desynchronize. The platform needed to support 650,000+ registered user accounts and 60+ microservices without latency spikes during peak rush hours.
+                </p>
+
+                <h5>Engineering Solution</h5>
+                <p>
+                  Architected a unified backend with Node.js and Sails.js handling both synchronous REST APIs and event-driven WebSocket streams. Replaced slow Waterline ORM queries with native PostgreSQL commands and MongoDB aggregation pipelines, cutting ticket endpoint latency to ~200ms. Offloaded notification delivery and heavy processing to AWS SQS worker queues and 10–15 automated cron jobs.
+                </p>
+
+                <h5>Key Backend Architectural Decisions</h5>
+                <ul>
+                  <li><strong>Decoupling Notifications via AWS SQS:</strong> Prevented API latency spikes during mass ticket alerts by enqueueing push/SMS events onto SQS worker queues.</li>
+                  <li><strong>Native SQL & Aggregations:</strong> Bypassed ORM abstraction on performance-critical ticket lookups, achieving ~200 ms response times measured in Postman.</li>
+                  <li><strong>Multi-Channel Push Strategy:</strong> Supported APNs Live Activities on iOS for dynamic lock-screen ticket position countdowns alongside FCM and Huawei Push Kit from the ground up.</li>
+                </ul>
+
+                <h5>Compliance & Security Statement</h5>
+                <p class="text-dim" style="font-size: 0.8rem; margin-top: 12px;">
+                  <em>Note: High-level engineering case study. In accordance with confidentiality standards, proprietary code, internal endpoints, client identities, and private infrastructure configurations are omitted.</em>
+                </p>
+              </div>
+            </details>
+
+            <div class="tech-tags-group" style="margin-top: 24px;">
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Sails.js</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">MongoDB Aggregation</span>
+              <span class="tech-tag">Redis Caching</span>
+              <span class="tech-tag">AWS SQS</span>
+              <span class="tech-tag">Socket.io</span>
+              <span class="tech-tag">Apple APNs Live Activities</span>
+              <span class="tech-tag">Huawei Push Kit</span>
+              <span class="tech-tag">Firebase FCM</span>
+              <span class="tech-tag">Mapbox APIs</span>
+              <span class="tech-tag">RESTful APIs</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Flagship GenAI / RAG Project — KnowledgeBase AI -->
+    <section id="rag-case-study" class="section" aria-label="RAG Project Deep Dive">
+      <div class="container">
+        <div class="section-header reveal-init">
+          <span class="section-tag">Flagship Personal Project</span>
+          <h2 class="section-title">KnowledgeBase AI</h2>
+          <p class="section-subtitle">
+            RAG-Powered Document Intelligence Platform with Semantic Vector Retrieval, Local LLMs & Streaming Responses.
+          </p>
+        </div>
+
+        <article class="project-feature-card reveal-init" style="border-color: var(--border-accent);">
+          <div class="project-topbar">
+            <div class="badge-group">
+              <span class="project-badge badge-rag">AI / RAG Platform</span>
+              <span class="project-badge badge-role">LangChain JS • pgvector • Ollama</span>
+            </div>
+
+            <a href="https://github.com/Sagar-zignuts/Knowedge_based-_RAG/tree/main/knowledge-base-rag" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+              View Repository on GitHub
+            </a>
+          </div>
+
+          <div class="project-header">
+            <h3>KnowledgeBase AI</h3>
+            <p class="project-subtitle">Full-Stack Retrieval-Augmented Generation & Vector Search Engine</p>
+            <p class="project-lead">
+              KnowledgeBase AI is a full-stack Retrieval-Augmented Generation platform that allows users to upload documents and ask AI questions based on their content, with semantic retrieval, contextual responses, source citations, conversation history, and real-time streaming.
+            </p>
+          </div>
+
+          <!-- Problem & Solution Narrative -->
+          <div class="recruiter-overview-grid" style="margin-bottom: 28px;">
+            <div class="overview-card">
+              <h4>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                The Problem
+              </h4>
+              <p>Traditional document search often relies on keyword matching and makes it difficult to ask natural-language questions across large collections of documents. Users cannot easily pinpoint exact citations across PDFs, text documents, or scanned images.</p>
+            </div>
+
+            <div class="overview-card">
+              <h4>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                The Engineering Solution
+              </h4>
+              <p>Built an end-to-end RAG pipeline that converts uploaded documents into searchable vector representations, stores them in PostgreSQL with pgvector, executes cosine similarity retrieval for relevant context, and generates grounded streaming responses via Ollama.</p>
+            </div>
+          </div>
+
+          <!-- Animated / Visual RAG Pipeline Strip -->
+          <div class="rag-pipeline-wrapper">
+            <div class="pipeline-header">
+              <span class="pipeline-title">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                End-to-End RAG Ingestion & Query Pipeline
+              </span>
+              <span class="mono text-cyan" style="font-size:0.75rem;">Sliding Window: 800 Chars • 150 Overlap • 768-dim</span>
+            </div>
+
+            <div class="pipeline-flow">
+              <div class="pipeline-node">
+                <span class="pipeline-node-step">01. INGEST</span>
+                <span class="pipeline-node-label">Doc Upload</span>
+                <span class="pipeline-node-meta">PDF, TXT, MD, OCR</span>
+              </div>
+              <div class="pipeline-node">
+                <span class="pipeline-node-step">02. EXTRACT</span>
+                <span class="pipeline-node-label">Parse Text</span>
+                <span class="pipeline-node-meta">pdf-parse / Cheerio</span>
+              </div>
+              <div class="pipeline-node">
+                <span class="pipeline-node-step">03. CHUNK</span>
+                <span class="pipeline-node-label">Chunking</span>
+                <span class="pipeline-node-meta">800c / 150 overlap</span>
+              </div>
+              <div class="pipeline-node">
+                <span class="pipeline-node-step">04. EMBED</span>
+                <span class="pipeline-node-label">Embeddings</span>
+                <span class="pipeline-node-meta">nomic-embed-text</span>
+              </div>
+              <div class="pipeline-node">
+                <span class="pipeline-node-step">05. STORE</span>
+                <span class="pipeline-node-label">Vector DB</span>
+                <span class="pipeline-node-meta">Postgres + pgvector</span>
+              </div>
+              <div class="pipeline-node">
+                <span class="pipeline-node-step">06. RETRIEVE</span>
+                <span class="pipeline-node-label">Cosine Search</span>
+                <span class="pipeline-node-meta">Top-K Context</span>
+              </div>
+              <div class="pipeline-node">
+                <span class="pipeline-node-step">07. GENERATE</span>
+                <span class="pipeline-node-label">Ollama LLM</span>
+                <span class="pipeline-node-meta">llama3.2 Chat</span>
+              </div>
+              <div class="pipeline-node">
+                <span class="pipeline-node-step">08. STREAM</span>
+                <span class="pipeline-node-label">SSE Stream</span>
+                <span class="pipeline-node-meta">With Citations</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Topology Architecture Map -->
+          <div class="architecture-topology">
+            <div class="pipeline-header">
+              <span class="pipeline-title">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                System Topology & Component Architecture (Click Any Node to Inspect)
+              </span>
+              <span class="mono text-muted" style="font-size:0.75rem;">Interactive Node Map</span>
+            </div>
+
+            <div class="topology-grid">
+              <div class="topo-col">
+                <div class="topo-node active-node" data-rag-node="spa">
+                  <div class="topo-node-header">
+                    <span class="topo-node-title">Browser SPA</span>
+                    <span class="topo-badge">Frontend</span>
+                  </div>
+                  <p class="topo-node-desc">Client interface for document uploads, interactive chat sessions, and SSE streaming listener.</p>
+                </div>
+
+                <div class="topo-node" data-rag-node="sails">
+                  <div class="topo-node-header">
+                    <span class="topo-node-title">Sails.js API Server</span>
+                    <span class="topo-badge">Node.js Core</span>
+                  </div>
+                  <p class="topo-node-desc">Orchestrates JWT security, file ingestion (Multer), LangChain execution, and SSE streaming responses.</p>
+                </div>
+              </div>
+
+              <div class="topo-col">
+                <div class="topo-node" data-rag-node="mongo">
+                  <div class="topo-node-header">
+                    <span class="topo-node-title">MongoDB Services</span>
+                    <span class="topo-badge">Metadata DB</span>
+                  </div>
+                  <p class="topo-node-desc">Stores user records, document catalog metadata, multi-turn chat sessions, messages, and rating feedback.</p>
+                </div>
+
+                <div class="topo-node" data-rag-node="postgres">
+                  <div class="topo-node-header">
+                    <span class="topo-node-title">PostgreSQL + pgvector</span>
+                    <span class="topo-badge">Vector DB</span>
+                  </div>
+                  <p class="topo-node-desc">Holds parsed text chunks and 768-dimensional vector embeddings with cosine distance indexing (<=>).</p>
+                </div>
+              </div>
+
+              <div class="topo-col">
+                <div class="topo-node" data-rag-node="ollama">
+                  <div class="topo-node-header">
+                    <span class="topo-node-title">Ollama Local LLM</span>
+                    <span class="topo-badge">AI Runtime</span>
+                  </div>
+                  <p class="topo-node-desc">Local inference runtime executing llama3.2 for chat generation and nomic-embed-text for vectorization.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dynamic Inspector Box -->
+            <div class="topo-inspector-panel">
+              <div class="topo-inspector-title">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                <span id="ragInspectorTitle">Browser SPA / Client Interface</span>
+              </div>
+              <p id="ragInspectorDesc" class="topo-inspector-body">
+                Single-page interface facilitating multi-format document ingestion (PDF, TXT, MD, Images, URLs) and real-time conversation. Listens to Server-Sent Events (SSE) for word-by-word streaming generation and displays grounded source citations with similarity rankings.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature Cards Grid -->
+          <div class="tech-modules-grid">
+            <div class="tech-module-item">
+              <div class="tech-module-title">
+                <span>Multi-Format Ingestion</span>
+                <span class="mono">OCR & Parsers</span>
+              </div>
+              <p class="text-muted" style="font-size:0.86rem;">Supports PDF, TXT, Markdown, Web URLs, and Images via Tesseract.js OCR for scanned document processing.</p>
+            </div>
+
+            <div class="tech-module-item">
+              <div class="tech-module-title">
+                <span>Semantic Search</span>
+                <span class="mono">pgvector Cosine</span>
+              </div>
+              <p class="text-muted" style="font-size:0.86rem;">Retrieves context through cosine vector distance (<=>) matching rather than brittle keyword lookups.</p>
+            </div>
+
+            <div class="tech-module-item">
+              <div class="tech-module-title">
+                <span>Streaming AI Responses</span>
+                <span class="mono">SSE Protocol</span>
+              </div>
+              <p class="text-muted" style="font-size:0.86rem;">Delivers low-latency token streaming to the browser via Server-Sent Events with active typing animations.</p>
+            </div>
+
+            <div class="tech-module-item">
+              <div class="tech-module-title">
+                <span>Grounded Source Citations</span>
+                <span class="mono">Exact Chunk Tracing</span>
+              </div>
+              <p class="text-muted" style="font-size:0.86rem;">Explicitly renders file names, document sections, and similarity scores verifying answer authenticity.</p>
+            </div>
+
+            <div class="tech-module-item">
+              <div class="tech-module-title">
+                <span>Chat History & Feedback</span>
+                <span class="mono">MongoDB Store</span>
+              </div>
+              <p class="text-muted" style="font-size:0.86rem;">Persists multi-session conversation trees and enables user ratings/feedback collection on AI answers.</p>
+            </div>
+
+            <div class="tech-module-item">
+              <div class="tech-module-title">
+                <span>Admin Analytics & Local AI</span>
+                <span class="mono">JWT / Ollama</span>
+              </div>
+              <p class="text-muted" style="font-size:0.86rem;">Admin dashboards for chunk statistics and document metrics, running 100% locally with zero external API fees.</p>
+            </div>
+          </div>
+
+          <!-- Interactive Mock RAG Chat Window -->
+          <div class="rag-demo-window">
+            <div class="demo-titlebar">
+              <div class="demo-window-controls">
+                <span class="demo-dot red"></span>
+                <span class="demo-dot yellow"></span>
+                <span class="demo-dot green"></span>
+              </div>
+              <div class="demo-titlebar-title">
+                <span>KnowledgeBase AI • Interactive RAG Query Demo</span>
+              </div>
+              <div class="mono text-cyan" style="font-size: 0.72rem;">pgvector: ONLINE</div>
+            </div>
+
+            <div class="demo-body">
+              <div class="demo-disclaimer">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                <span>Interactive prototype demonstration. Select a sample question or type your own to inspect the retrieval pipeline, vector cosine matching, and streaming response.</span>
+              </div>
+
+              <!-- Quick Prompt Pills -->
+              <div class="demo-quick-prompts">
+                <button class="prompt-chip" data-prompt-key="auth">
+                  🔐 "What are the main authentication mechanisms described in the uploaded documents?"
+                </button>
+                <button class="prompt-chip" data-prompt-key="chunking">
+                  📄 "How does the document chunking and embedding pipeline work?"
+                </button>
+                <button class="prompt-chip" data-prompt-key="schema">
+                  🗄️ "What database schema is used for vector search and session persistence?"
+                </button>
+              </div>
+
+              <!-- Chat Message Area -->
+              <div class="chat-messages-container" id="chatMessages">
+                <div class="chat-message user-msg">
+                  <div class="chat-avatar">U</div>
+                  <div class="chat-bubble">
+                    <p>What are the main authentication mechanisms described in the uploaded documents?</p>
+                  </div>
+                </div>
+
+                <div class="chat-message ai-msg">
+                  <div class="chat-avatar">AI</div>
+                  <div class="chat-bubble">
+                    <p>Based on the retrieved documents, the system implements a stateless JWT-based authentication architecture with role-based access control (RBAC). User sessions and refresh tokens are managed securely, while protected API endpoints enforce authorization middleware before routing requests to backend controllers or RAG retrieval services.</p>
+                    <div class="citations-box">
+                      <span class="citations-label">Grounded Sources & Citations:</span>
+                      <div class="citation-card">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        <strong>document-authentication.pdf</strong> • Section 3.2: JWT Auth & Permissions (Page 4) • <span class="text-cyan">Score: 0.912</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Input Bar -->
+              <div class="demo-input-bar">
+                <input type="text" id="chatInput" placeholder="Ask a question about the uploaded document corpus..." aria-label="Ask RAG Question">
+                <button id="sendChatBtn" class="btn btn-primary btn-sm">
+                  <span>Send</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="tech-tags-group" style="margin-top: 24px;">
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Sails.js</span>
+            <span class="tech-tag">LangChain JS</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">pgvector</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">Ollama</span>
+            <span class="tech-tag">llama3.2</span>
+            <span class="tech-tag">nomic-embed-text</span>
+            <span class="tech-tag">SSE</span>
+            <span class="tech-tag">JWT</span>
+            <span class="tech-tag">Multer</span>
+            <span class="tech-tag">pdf-parse</span>
+            <span class="tech-tag">Tesseract.js OCR</span>
+            <span class="tech-tag">Cheerio</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 7. Secondary Projects (Buddy AI & College Projects) -->
+    <section class="section" aria-label="Other Engineering Projects">
+      <div class="container">
+        <div class="section-header reveal-init">
+          <span class="section-tag">Other Projects</span>
+          <h2 class="section-title">AI Extensions & Distributed Applications</h2>
+          <p class="section-subtitle">
+            Additional software tools, extensions, and real-time backend systems developed.
+          </p>
+        </div>
+
+        <div class="secondary-projects-grid">
+          <!-- Buddy - The AI Partner -->
+          <article class="project-card reveal-init">
+            <div class="project-card-header">
+              <span class="project-badge badge-rag">AI / Chrome Extension</span>
+              <span class="mono text-dim" style="font-size:0.75rem;">Full-Stack Extension</span>
+            </div>
+            <h3 class="project-card-title">Buddy – The AI Partner</h3>
+            <p class="project-card-desc">
+              Developed a full-stack Chrome extension integrated with the Google Gemini API, delivering real-time coding hints, AI chat assistance, quiz generation, and an intelligent code reviewer.
+            </p>
+            <ul class="feature-bullet-list">
+              <li><strong>Real-Time Coding Hints:</strong> Contextual hints for algorithms and syntax challenges.</li>
+              <li><strong>Intelligent Code Reviewer:</strong> Analyzes user code to suggest optimizations and improvements.</li>
+              <li><strong>Interactive AI Quizzes:</strong> Auto-generated programming concept assessments.</li>
+              <li><strong>Authentication & Storage:</strong> Google OAuth and email authentication backed by MongoDB.</li>
+            </ul>
+            <div class="tech-tags-group">
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Google Gemini API</span>
+              <span class="tech-tag">MongoDB</span>
+              <span class="tech-tag">Google OAuth</span>
+            </div>
+          </article>
+
+          <!-- College Project 1: Automobile Customization Platform -->
+          <article class="project-card reveal-init">
+            <div class="project-card-header">
+              <span class="project-badge badge-role">Academic Capstone</span>
+              <span class="mono text-dim" style="font-size:0.75rem;">Web Application</span>
+            </div>
+            <h3 class="project-card-title">Automobile Customization Platform</h3>
+            <p class="project-card-desc">
+              Comprehensive web platform enabling interactive automobile modifications, pricing calculations, and real-time order processing workflows.
+            </p>
+            <ul class="feature-bullet-list">
+              <li><strong>Backend Responsibilities:</strong> Backend data handling, API integration, and system logic.</li>
+              <li><strong>Business Logic:</strong> Dynamic pricing rules for custom vehicle parts and accessory packages.</li>
+              <li><strong>System Logic:</strong> Vehicle specification schemas, live modification preview updates, and order states.</li>
+            </ul>
+            <div class="tech-tags-group">
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">REST APIs</span>
+              <span class="tech-tag">Database Modeling</span>
+              <span class="tech-tag">System Logic</span>
+            </div>
+          </article>
+
+          <!-- College Project 2: Real-Time Chat Application -->
+          <article class="project-card reveal-init">
+            <div class="project-card-header">
+              <span class="project-badge badge-role">Real-Time Networking</span>
+              <span class="mono text-dim" style="font-size:0.75rem;">Chat Service</span>
+            </div>
+            <h3 class="project-card-title">Real-Time Chat Application</h3>
+            <p class="project-card-desc">
+              Low-latency messaging platform supporting instant one-on-one communication, group channels, and live online user presence states.
+            </p>
+            <ul class="feature-bullet-list">
+              <li><strong>Real-Time Messaging:</strong> Instant delivery powered by React.js, Socket.io, and Node.js backend logic.</li>
+              <li><strong>Group & Private Channels:</strong> Secure room namespaces with membership validation and history.</li>
+              <li><strong>User Management:</strong> User registration, profile status, and active connection tracking.</li>
+            </ul>
+            <div class="tech-tags-group">
+              <span class="tech-tag">React.js</span>
+              <span class="tech-tag">Socket.io</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">WebSockets</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Interactive Technical Skills Matrix -->
+    <section id="skills" class="section" aria-label="Technical Skills">
+      <div class="container">
+        <div class="section-header reveal-init">
+          <span class="section-tag">Technical Competencies</span>
+          <h2 class="section-title">Backend Skills & Tooling Matrix</h2>
+          <p class="section-subtitle">
+            Categorized technical stack matching Sagar's resume. No arbitrary percentages or artificial progress bars.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="skills-tabs reveal-init">
+          <button class="skill-tab-btn active" data-category="all">All Disciplines</button>
+          <button class="skill-tab-btn" data-category="backend">Backend & APIs</button>
+          <button class="skill-tab-btn" data-category="databases">Databases & Storage</button>
+          <button class="skill-tab-btn" data-category="ai">AI & GenAI</button>
+          <button class="skill-tab-btn" data-category="realtime">Real-Time & Messaging</button>
+          <button class="skill-tab-btn" data-category="security">Auth & Security</button>
+          <button class="skill-tab-btn" data-category="languages">Languages & Frontend</button>
+          <button class="skill-tab-btn" data-category="integrations">Integrations & Tools</button>
+        </div>
+
+        <div class="skills-grid reveal-init">
+          <!-- Category 1: Backend -->
+          <div class="skill-category-card" data-category="backend">
+            <div class="skill-cat-header">
+              <svg class="skill-cat-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              <h3 class="skill-cat-title">Backend Architecture</h3>
+            </div>
+            <div class="skill-tags-flex">
+              <span class="skill-pill">Node.js <span class="assoc-tag">Production</span></span>
+              <span class="skill-pill">Sails.js <span class="assoc-tag">Core MVC</span></span>
+              <span class="skill-pill">Express.js <span class="assoc-tag">APIs</span></span>
+              <span class="skill-pill">RESTful APIs <span class="assoc-tag">Design</span></span>
+              <span class="skill-pill">Microservices <span class="assoc-tag">60+ Services</span></span>
+              <span class="skill-pill">JavaScript (ES6+)</span>
+            </div>
+          </div>
+
+          <!-- Category 2: Databases -->
+          <div class="skill-category-card" data-category="databases">
+            <div class="skill-cat-header">
+              <svg class="skill-cat-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              <h3 class="skill-cat-title">Databases & Storage</h3>
+            </div>
+            <div class="skill-tags-flex">
+              <span class="skill-pill">PostgreSQL <span class="assoc-tag">Native Queries</span></span>
+              <span class="skill-pill">MongoDB <span class="assoc-tag">Aggregation</span></span>
+              <span class="skill-pill">Redis <span class="assoc-tag">Caching</span></span>
+              <span class="skill-pill">pgvector <span class="assoc-tag">Vector DB</span></span>
+              <span class="skill-pill">MySQL</span>
+              <span class="skill-pill">SQL</span>
+              <span class="skill-pill">Waterline ORM</span>
+            </div>
+          </div>
+
+          <!-- Category 3: AI / GenAI -->
+          <div class="skill-category-card" data-category="ai">
+            <div class="skill-cat-header">
+              <svg class="skill-cat-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+              <h3 class="skill-cat-title">AI & GenAI Integration</h3>
+            </div>
+            <div class="skill-tags-flex">
+              <span class="skill-pill">RAG Pipelines <span class="assoc-tag">KnowledgeBase</span></span>
+              <span class="skill-pill">LangChain JS</span>
+              <span class="skill-pill">Ollama <span class="assoc-tag">Local LLMs</span></span>
+              <span class="skill-pill">Vector Embeddings <span class="assoc-tag">768-dim</span></span>
+              <span class="skill-pill">Semantic Search</span>
+              <span class="skill-pill">Prompt Engineering</span>
+              <span class="skill-pill">Google Gemini API</span>
+              <span class="skill-pill">LLMs</span>
+            </div>
+          </div>
+
+          <!-- Category 4: Real-Time & Messaging -->
+          <div class="skill-category-card" data-category="realtime">
+            <div class="skill-cat-header">
+              <svg class="skill-cat-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              <h3 class="skill-cat-title">Real-Time & Queues</h3>
+            </div>
+            <div class="skill-tags-flex">
+              <span class="skill-pill">Socket.io <span class="assoc-tag">Live Feeds</span></span>
+              <span class="skill-pill">WebSockets</span>
+              <span class="skill-pill">AWS SQS <span class="assoc-tag">Async Workers</span></span>
+              <span class="skill-pill">Server-Sent Events (SSE)</span>
+              <span class="skill-pill">Scheduled Cron Jobs <span class="assoc-tag">10-15 Jobs</span></span>
+            </div>
+          </div>
+
+          <!-- Category 5: Auth & Security -->
+          <div class="skill-category-card" data-category="security">
+            <div class="skill-cat-header">
+              <svg class="skill-cat-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <h3 class="skill-cat-title">Authentication & Security</h3>
+            </div>
+            <div class="skill-tags-flex">
+              <span class="skill-pill">JWT</span>
+              <span class="skill-pill">Role-Based Access (RBAC)</span>
+              <span class="skill-pill">OTP Verification</span>
+              <span class="skill-pill">Firebase Auth</span>
+              <span class="skill-pill">Google OAuth</span>
+              <span class="skill-pill">Pentest Hardening</span>
+            </div>
+          </div>
+
+          <!-- Category 6: Languages & Frontend -->
+          <div class="skill-category-card" data-category="languages">
+            <div class="skill-cat-header">
+              <svg class="skill-cat-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
+              <h3 class="skill-cat-title">Languages & Frontend</h3>
+            </div>
+            <div class="skill-tags-flex">
+              <span class="skill-pill">JavaScript</span>
+              <span class="skill-pill">TypeScript</span>
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">C</span>
+              <span class="skill-pill">C++</span>
+              <span class="skill-pill">React.js</span>
+              <span class="skill-pill">Redux</span>
+              <span class="skill-pill">DSA (Data Structures)</span>
+            </div>
+          </div>
+
+          <!-- Category 7: Integrations & Tools -->
+          <div class="skill-category-card" data-category="integrations">
+            <div class="skill-cat-header">
+              <svg class="skill-cat-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+              <h3 class="skill-cat-title">Integrations & Tooling</h3>
+            </div>
+            <div class="skill-tags-flex">
+              <span class="skill-pill">Firebase / FCM</span>
+              <span class="skill-pill">Apple APNs (Live Activities)</span>
+              <span class="skill-pill">Huawei Push Kit</span>
+              <span class="skill-pill">SMS Gateways</span>
+              <span class="skill-pill">Mapbox APIs</span>
+              <span class="skill-pill">Git</span>
+              <span class="skill-pill">GitHub</span>
+              <span class="skill-pill">Postman</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Engineering Approach ("How I Build") -->
+    <section class="section" aria-label="Engineering Approach">
+      <div class="container">
+        <div class="section-header reveal-init">
+          <span class="section-tag">Methodology</span>
+          <h2 class="section-title">How I Build Systems</h2>
+          <p class="section-subtitle">
+            A disciplined, production-minded engineering framework centered on reliability, data integrity, and performance.
+          </p>
+        </div>
+
+        <div class="approach-grid reveal-init">
+          <div class="approach-card">
+            <div class="approach-num">01</div>
+            <h3 class="approach-title">Understand the Problem</h3>
+            <p class="approach-desc">Translate business requirements into concrete backend workflows, entity models, and deterministic API contracts.</p>
+          </div>
+
+          <div class="approach-card">
+            <div class="approach-num">02</div>
+            <h3 class="approach-title">Design the Data Flow</h3>
+            <p class="approach-desc">Choose appropriate database schemas, caching layers, message queues, and service patterns before writing code.</p>
+          </div>
+
+          <div class="approach-card">
+            <div class="approach-num">03</div>
+            <h3 class="approach-title">Build Reliable APIs</h3>
+            <p class="approach-desc">Focus on rigorous input validation, granular authorization, uniform error structures, and maintainable MVC patterns.</p>
+          </div>
+
+          <div class="approach-card">
+            <div class="approach-num">04</div>
+            <h3 class="approach-title">Optimize</h3>
+            <p class="approach-desc">Improve database queries, eliminate N+1 bottlenecks, implement Redis caching, and offload tasks to AWS SQS.</p>
+          </div>
+
+          <div class="approach-card">
+            <div class="approach-num">05</div>
+            <h3 class="approach-title">Monitor & Improve</h3>
+            <p class="approach-desc">Investigate production/staging logs, patch vulnerabilities, test edge cases, and continuously harden services.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. "What I Work With" Interactive System Architecture -->
+    <section id="architecture" class="section" aria-label="Backend Architecture Topology">
+      <div class="container">
+        <div class="section-header reveal-init">
+          <span class="section-tag">System Design</span>
+          <h2 class="section-title">What I Work With</h2>
+          <p class="section-subtitle">
+            An interactive model of the end-to-end backend service architecture I design and support in production.
+          </p>
+        </div>
+
+        <div class="system-arch-box reveal-init">
+          <div class="arch-flow-row">
+            <div class="arch-stage-card selected" data-stage="clients">
+              <span class="arch-stage-num">Stage 01</span>
+              <h3 class="arch-stage-title">Clients</h3>
+              <span class="arch-stage-tech">Web • iOS • Android</span>
+            </div>
+
+            <div class="arch-connector">➔</div>
+
+            <div class="arch-stage-card" data-stage="apis">
+              <span class="arch-stage-num">Stage 02</span>
+              <h3 class="arch-stage-title">REST APIs</h3>
+              <span class="arch-stage-tech">Node.js • Sails.js</span>
+            </div>
+
+            <div class="arch-connector">➔</div>
+
+            <div class="arch-stage-card" data-stage="storage">
+              <span class="arch-stage-num">Stage 03</span>
+              <h3 class="arch-stage-title">Storage & Cache</h3>
+              <span class="arch-stage-tech">Postgres • Mongo • Redis</span>
+            </div>
+
+            <div class="arch-connector">➔</div>
+
+            <div class="arch-stage-card" data-stage="sqs">
+              <span class="arch-stage-num">Stage 04</span>
+              <h3 class="arch-stage-title">AWS SQS</h3>
+              <span class="arch-stage-tech">Async Worker Pool</span>
+            </div>
+
+            <div class="arch-connector">➔</div>
+
+            <div class="arch-stage-card" data-stage="realtime">
+              <span class="arch-stage-num">Stage 05</span>
+              <h3 class="arch-stage-title">Real-Time</h3>
+              <span class="arch-stage-tech">Socket.io • Push • SMS</span>
+            </div>
+          </div>
+
+          <div class="arch-detail-box">
+            <strong class="text-cyan">Architecture Detail:</strong>
+            <p id="archDetailText" style="margin-top: 6px;">
+              Frontend & Mobile Clients: Web browsers, mobile applications (iOS/Android), and external third-party service webhooks sending RESTful requests and maintaining WebSocket connections.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Education & Leadership Section -->
+    <section class="section" aria-label="Education Background">
+      <div class="container">
+        <div class="section-header reveal-init">
+          <span class="section-tag">Academic Background & Leadership</span>
+          <h2 class="section-title">Education & Leadership</h2>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 20px; max-width: 860px; margin: 0 auto;">
+          <div class="education-card reveal-init" style="width: 100%;">
+            <div class="edu-info">
+              <h3>B.Tech – Information Technology</h3>
+              <p class="edu-institute">Ganpat University, Mehsana</p>
+              <p class="edu-period">July 2021 – July 2025 • Gujarat, India</p>
+            </div>
+            <div class="edu-grade-pill">
+              <div class="edu-grade-val">8.74</div>
+              <div class="edu-grade-label">Cumulative CGPA</div>
+            </div>
+          </div>
+
+          <div class="education-card reveal-init" style="width: 100%;">
+            <div class="edu-info">
+              <h3>H.S.C. – Higher Secondary Certificate</h3>
+              <p class="edu-institute">Sorath International School, Junagadh</p>
+              <p class="edu-period">June 2020 – June 2021 • Junagadh, Gujarat</p>
+            </div>
+            <div class="edu-grade-pill">
+              <div class="edu-grade-val">86%</div>
+              <div class="edu-grade-label">Percentage</div>
+            </div>
+          </div>
+
+          <div class="education-card reveal-init" style="width: 100%; border-color: rgba(99, 102, 241, 0.35);">
+            <div class="edu-info">
+              <h3>Team Lead – Hackathon</h3>
+              <p class="edu-institute text-cyan">"Rewear" Platform</p>
+              <p class="edu-period">Led an engineering team building a platform connecting clothing sellers and buyers to give used clothes a new life.</p>
+            </div>
+            <div class="edu-grade-pill" style="border-color: rgba(99, 102, 241, 0.4); background: rgba(99, 102, 241, 0.1);">
+              <div class="edu-grade-val" style="color: var(--accent-indigo);">Lead</div>
+              <div class="edu-grade-label">Hackathon</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. Resume Section Callout -->
+    <section id="resume" class="section" aria-label="Resume Download">
+      <div class="container">
+        <div class="cta-banner reveal-init">
+          <span class="section-tag" style="background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.15); color: #fff;">
+            Curriculum Vitae
+          </span>
+          <h2>Want to know more?</h2>
+          <p>
+            Explore my production experience, detailed technical responsibilities, architecture implementations, and projects in my resume.
+          </p>
+          <div class="cta-actions">
+            <button class="btn btn-primary btn-lg trigger-resume-modal">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              View & Download Resume PDF
+            </button>
+            <a href="https://github.com/BhedaSagar" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">
+              Visit GitHub Profile
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13. GitHub CTA Section -->
+    <section class="section" aria-label="GitHub Code Showcase">
+      <div class="container">
+        <div class="cta-banner reveal-init" style="border-color: rgba(99, 102, 241, 0.35);">
+          <span class="section-tag">Open Source & Code</span>
+          <h2>Explore My Code</h2>
+          <p>
+            I enjoy building backend systems and experimenting with practical AI applications. Explore my repositories, RAG pipelines, and experiments on GitHub.
+          </p>
+          <div class="cta-actions">
+            <a href="https://github.com/BhedaSagar" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+              Visit GitHub Profile (@BhedaSagar)
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14. Contact Section -->
+    <section id="contact" class="section" aria-label="Contact Information">
+      <div class="container">
+        <div class="section-header reveal-init">
+          <span class="section-tag">Get in Touch</span>
+          <h2 class="section-title">Let's Build Something</h2>
+          <p class="section-subtitle">
+            Have a backend problem, interesting project, or software engineering opportunity? I'd be happy to connect.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Direct Details -->
+          <div class="contact-info-panel reveal-init">
+            <!-- Email -->
+            <div class="contact-card">
+              <div class="contact-card-left">
+                <div class="contact-card-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div class="contact-card-meta">
+                  <span class="label">Direct Email</span>
+                  <a href="mailto:sagarbheda2004@gmail.com" class="val">sagarbheda2004@gmail.com</a>
+                </div>
+              </div>
+              <button class="btn btn-icon btn-sm" id="copyEmailBtn" title="Copy Email">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </div>
+
+            <!-- Phone -->
+            <div class="contact-card">
+              <div class="contact-card-left">
+                <div class="contact-card-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div class="contact-card-meta">
+                  <span class="label">Phone / WhatsApp</span>
+                  <a href="tel:+919875000720" class="val">+91 9875000720</a>
+                </div>
+              </div>
+              <button class="btn btn-icon btn-sm" id="copyPhoneBtn" title="Copy Phone Number">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </div>
+
+            <!-- Location -->
+            <div class="contact-card">
+              <div class="contact-card-left">
+                <div class="contact-card-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div class="contact-card-meta">
+                  <span class="label">Location</span>
+                  <span class="val">Junagadh, Gujarat, India</span>
+                  <span style="font-size: 0.76rem; color: var(--text-dim); display: block;">Office: Zignuts Technolab, Gandhinagar</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- LinkedIn Profile Link -->
+            <div class="contact-card">
+              <div class="contact-card-left">
+                <div class="contact-card-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </div>
+                <div class="contact-card-meta">
+                  <span class="label">LinkedIn</span>
+                  <a href="https://www.linkedin.com/in/sagar-bheda" target="_blank" rel="noopener noreferrer" class="val text-cyan">Sagar Bheda</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- GitHub Profile Link -->
+            <div class="contact-card">
+              <div class="contact-card-left">
+                <div class="contact-card-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                </div>
+                <div class="contact-card-meta">
+                  <span class="label">GitHub</span>
+                  <a href="https://github.com/BhedaSagar" target="_blank" rel="noopener noreferrer" class="val text-cyan">github.com/BhedaSagar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-card reveal-init">
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="senderName" class="form-label">Your Name</label>
+                <input type="text" id="senderName" class="form-input" placeholder="e.g. Alex Smith" required>
+              </div>
+
+              <div class="form-group">
+                <label for="senderEmail" class="form-label">Your Email</label>
+                <input type="email" id="senderEmail" class="form-input" placeholder="e.g. alex@company.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="senderMessage" class="form-label">Message</label>
+                <textarea id="senderMessage" class="form-textarea" placeholder="Tell me about your project, backend challenge, or role..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                <span>Send Message</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       Footer
+       ======================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4>Sagar Bheda</h4>
+          <p>Backend Developer • Node.js • Sails.js • GenAI</p>
+          <p style="font-size: 0.8rem; color: var(--text-dim); margin-top: 4px;">Junagadh & Gandhinagar, Gujarat, India</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="https://github.com/BhedaSagar" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/sagar-bheda" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:sagarbheda2004@gmail.com">Email</a>
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#rag-case-study">KnowledgeBase AI</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Sagar Bheda. All rights reserved.</span>
+        <span>Production Backend Systems • Practical RAG Solutions</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       Resume Modal Dialog
+       ======================================================================== -->
+  <div class="modal-overlay" id="resumeModal" role="dialog" aria-modal="true" aria-labelledby="resumeModalTitle">
+    <div class="modal-card" style="max-width: 780px; max-height: 90vh; overflow-y: auto;">
+      <button class="modal-close" id="closeResumeBtn" aria-label="Close modal">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+
+      <span class="section-tag">Resume Document</span>
+      <h3 id="resumeModalTitle" style="font-size: 1.5rem; margin-bottom: 6px;">Sagar Bheda – Resume</h3>
+      <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 18px;">
+        Junior Backend Developer at Zignuts Technolab (March 2025 – Present) | Ganpat University B.Tech IT (8.74 CGPA)
+      </p>
+
+      <!-- In-Modal Quick Resume Viewer -->
+      <div style="background: rgba(8,12,20,0.85); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 20px; margin-bottom: 20px; font-size: 0.85rem; line-height: 1.6; color: var(--text-muted); max-height: 360px; overflow-y: auto;">
+        <div style="text-align: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.08);">
+          <h4 style="color: #fff; font-size: 1.15rem;">Sagar Bheda</h4>
+          <p class="mono" style="font-size: 0.78rem; color: var(--text-dim);">sagarbheda2004@gmail.com | +91 9875000720 | Junagadh, Gujarat, India</p>
+          <p class="mono" style="font-size: 0.78rem; color: var(--accent-cyan);">LinkedIn: Sagar Bheda | GitHub: BhedaSagar</p>
+        </div>
+
+        <p><strong class="text-bright">SKILLS:</strong> Node.js, Sails.js, Express.js, JavaScript, RESTful APIs, Microservices, Socket.io / WebSockets, Server-Sent Events (SSE), PostgreSQL, MongoDB (Aggregation), Redis (Caching), MySQL, SQL, Waterline ORM, pgvector, AWS SQS, Firebase / FCM, Apple APNs (Live Activities), Huawei Push Kit, SMS Gateway, Mapbox APIs, JWT, Firebase Auth, Google OAuth, OTP, RBAC, RAG, LangChain, Ollama, Google Gemini API, LLMs, TypeScript, Python, C, C++, React.js, Redux, DSA, Git, GitHub, Postman.</p>
+        
+        <p style="margin-top: 10px;"><strong class="text-bright">EXPERIENCE:</strong> <strong>Junior Backend Developer | Zignuts Technolab, Gandhinagar (March 2025 – Present)</strong><br>
+        Online queue, appointment, and e-service ticketing platform for high-traffic environments (hospitals and restaurants); <strong>650,000 registered user accounts</strong> and <strong>60+ services</strong> behind load balancer with horizontal scaling.<br>
+        • Optimized high-traffic endpoints to ~200 ms response time with Redis caching and native PostgreSQL queries.<br>
+        • Delivered live queue feeds, ticket counts, and agent updates via Socket.io.<br>
+        • Built push notifications across FCM, Apple APNs (Live Activities), and Huawei Push Kit.<br>
+        • Offloaded heavy workflows to AWS SQS and 10–15 scheduled background cron jobs.</p>
+
+        <p style="margin-top: 10px;"><strong class="text-bright">EDUCATION:</strong> B.Tech IT, Ganpat University (8.74 CGPA, 2021–2025) | H.S.C., Sorath International School (86%, 2020–2021).</p>
+      </div>
+
+      <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+        <a href="assets/Sagar_Bheda_Resume.pdf" download="Sagar_Bheda_Resume.pdf" class="btn btn-primary" style="flex: 1;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Official PDF
+        </a>
+        <a href="assets/Sagar_Bheda_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          Open PDF in New Tab
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Feedback -->
+  <div class="toast-notice" id="toastNotice" role="status" aria-live="polite">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    <span id="toastText">Action completed successfully</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/network-canvas.js"></script>
+  <script src="js/rag-demo.js"></script>
+  <script src="js/architecture-diagram.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

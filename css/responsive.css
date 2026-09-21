@@ -1,0 +1,162 @@
+/* ==========================================================================
+   SAGAR BHEDA - PREMIUM PERSONAL PORTFOLIO
+   Responsive Design & Mobile Stylesheet
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .topology-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .arch-flow-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .arch-connector {
+    text-align: center;
+    transform: rotate(90deg);
+    padding: 8px 0;
+  }
+}
+
+@media (max-width: 868px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  /* Mobile Drawer Menu */
+  .mobile-nav-drawer {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - var(--nav-height));
+    background: rgba(8, 12, 20, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    padding: 30px 24px;
+    gap: 20px;
+    z-index: 999;
+    transform: translateX(100%);
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform var(--trans-normal), visibility var(--trans-normal);
+    border-top: 1px solid var(--border-subtle);
+    overflow-y: auto;
+  }
+
+  .mobile-nav-drawer.open {
+    transform: translateX(0);
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .mobile-nav-drawer .nav-link {
+    font-size: 1.15rem;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .mobile-drawer-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .pipeline-flow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 70px 0;
+  }
+
+  .hero-name {
+    font-size: 2.5rem;
+  }
+
+  .hero-headline {
+    font-size: 1.2rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-feature-card {
+    padding: 24px 18px;
+  }
+
+  .timeline-card {
+    padding: 24px 18px;
+  }
+
+  .timeline-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-ctas .btn {
+    width: 100%;
+  }
+
+  .pipeline-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-banner {
+    padding: 32px 20px;
+  }
+
+  .footer-top {
+    flex-direction: column;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .chat-message {
+    max-width: 100%;
+  }
+
+  .cta-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .cta-actions .btn {
+    width: 100%;
+  }
+}
